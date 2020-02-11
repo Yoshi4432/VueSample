@@ -45,18 +45,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="text-center">1</td>
-                                <td class="text-center">山田太郎</td>
-                                <td class="text-center">example@gmail.com</td>
-                                <td class="text-center">
-                                    <button type="button">編集</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">2</td>
-                                <td class="text-center">山田花子</td>
-                                <td class="text-center">example2@gmail.com</td>
+                            <tr v-for="user in users" v-bind:key="user.id">
+                                <td class="text-center">@{{user.id}}</td>
+                                <td class="text-center">@{{user.name}}</td>
+                                <td class="text-center">@{{user.email}}</td>
                                 <td class="text-center">
                                     <button type="button">編集</button>
                                 </td>
